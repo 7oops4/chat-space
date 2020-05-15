@@ -34,38 +34,44 @@ Things you may want to cover:
 
 ### Association
 - has_many :chats
+- has_many :rooms
 - has_many :rooms_users
+- through :rooms_users
 
 
 ## roomsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|roomname|string|null: false, unique: true|
-|users_rooms_id|integer|null: false, foreign_key: true|
+|name|string|null: false, unique: true|
 
 ### Association
-- belongs_to :users_room
+- has_many :users_rooms
+- has_many :users
+- through :rooms_users
+- has_many :chats
 
 
 ## chatsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
+|text|text||
 |image|text||
-|users_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
+|room_id|integer|null: false, foreign_key: true|
 
 ### Association
 belongs_to :user
+belongs_to :room
 
 
-## groups_usersテーブル
+## rooms_usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|rooms_id|integer|null: false, foreign_key: true|
-|users_id|integer|null: false, foreign_key: true|
+|room_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :room
