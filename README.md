@@ -35,7 +35,7 @@ Things you may want to cover:
 ### Association
 - has_many :chats
 - has_many :rooms_users
-- has_many :rooms, through :rooms_users
+- has_many :rooms, through: :rooms_users
 
 
 ## roomsテーブル
@@ -47,7 +47,7 @@ Things you may want to cover:
 ### Association
 - has_many :chats
 - has_many :rooms_users
-- has_many :users, through :rooms_users
+- has_many :users, through: :rooms_users
 
 
 ## chatsテーブル
