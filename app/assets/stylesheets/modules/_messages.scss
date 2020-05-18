@@ -22,30 +22,34 @@ $initial_text_color: #999;
       height: 99px;
       border-bottom: solid 1px #eeeeee;
       padding: 0 20px;
-      .left-header__box{
+      &__box{
         text-align: center;
         line-height: 20px;
         width: 260px;
         display: flex;
         justify-content: space-between;
-        .left-header__box__user-name{
+        &__box__user-name{
           p{
             font-family: sans-serif;
             font-size: 16px;
           }
         }
-        .left-header__box__icons{
+        &__box__icons{
           width: 60px;
           display: flex;
           justify-content: flex-end;
-          .far.fa-edit{
-            color: $main_color;
-            line-height: 20px;
+          .far{
+            &.fa-edit{
+              color: $main_color;
+              line-height: 20px;
+            }
           }
-          .fas.fa-cog{
-            color: $main_color;
-            padding-left: 5px;
-            line-height: 20px;
+          .fas{
+            &.fa-cog{
+              color: $main_color;
+              padding-left: 5px;
+              line-height: 20px;
+            }
           }
         }
       }
@@ -54,20 +58,21 @@ $initial_text_color: #999;
       color: $main_color;
       text-decoration: none;
     }
-    .groups{
+    .group{
       background-color: #2f3e51;
       height: calc(100vh - 100px);
       padding: 20px 20px 0;
-      .group__name{
+      &__name{
         font-size: 15px;
       }
-      .group__new-chat{
+      &__new-chat{
         font-size: 11px;
         margin-top: 5px;
         margin-bottom: 40px;
       }
     }
   }
+
   .right-content{
     background-color: $main_color;
     width: calc(100vw - 300px);
@@ -78,14 +83,14 @@ $initial_text_color: #999;
       border-bottom: solid 1px #eeeeee;
       display: flex;
       justify-content: space-between;
-      .right-header__chat-space-info{
+      &__chat-space{
         margin: 35px 0 auto 40px;
-        .right-header__chat-space-title{
+        &__title{
           color: #333;
           font-size: 20px;
           margin-bottom: 15px;
         }
-        .right-header__chat-space-member{
+        &__member{
           color: $initial_text_color;
           font-size: 12px;
         }
@@ -94,65 +99,67 @@ $initial_text_color: #999;
         color: $link_color;
         text-decoration: none;
       }
-      .right-header__chat-space-title-edit-btn{
-        margin: 28px 40px auto 0;
-        width: 72px;
-        .right-header__chat-space-title-edit-text{
-          color: $link_color;
-          border: solid 1px $link_color;
-          font-size: 16px;
-          text-align: center;
-          line-height: 40px;
-          padding: 0 20px;
+      &__chat-space__title-edit{
+        &__btn{
+          margin: 28px 40px auto 0;
+          width: 72px;
+          &__text{
+            color: $link_color;
+            border: solid 1px $link_color;
+            font-size: 16px;
+            text-align: center;
+            line-height: 40px;
+            padding: 0 20px;
+          }
         }
       }
     }
     .right-chat_space{
       background-color: #fafafa;
       height: calc(100vh - 190px);
-      .right-chat_space__members-chats{
+      &__chats{
         padding: 35px 0 11px 40px;
-        .right-chat_space__chats-info{
+        &__members{
           margin-bottom: 12px;
           display: flex;
-          .right-chat_space__member-name{
+          &__name{
             color: #333;
             font-size: 16px;
             font-weight: bold;
           }
-          .right-chat_space__remark-time{
+          &__remark-time{
             color: $initial_text_color;
             font-size: 12px;
             padding-left: 5px;
           }
         }
-        .right-chat_space__chats{
-          .right-contents-chat_space__message{
+        &__message{
+          &__content{
             color: #434A54;
             font-size: 14px;
           }
         }
       }
-      .right-chat_space__my-chats{
+      &__my-chats{
         padding: 35px 40px 11px 0;
         float: right;
-        .right-chat_space__chats-info{
+        &__info{
           margin-bottom: 12px;
           display: flex;
           justify-content: space-between;
-          .right-chat_space__member-name{
+          &__name{
             color: #333;
             font-size: 16px;
             font-weight: bold;
           }
-          .right-chat_space__remark-time{
+          &__remark-time{
             color: $initial_text_color;
             font-size: 12px;
             padding-left: 5px;
           }
         }
-        .right-chat_space__chats{
-          .right-contents-chat_space__message{
+        &__message{
+          &__content{
             color: #434A54;
             font-size: 14px;
           }
@@ -162,18 +169,18 @@ $initial_text_color: #999;
     .right-form{
       background-color: #d2d2d2;
       height: 90px;
-      .right-form__input{
+      &__input{
         padding: 20px 40px;
         display: flex;
         justify-content: space-between;
-        .right-form__input-form{
+        &__form{
           width: calc(100vw - 495px);
           background-color: $main_color;
           display: flex;
           justify-content: space-between;
           align-items: center;
           position: relative;
-          .right-form__input-form__text{
+          &__text{
             color: $initial_text_color;
             font-size: 16px;
             width: 100%;
@@ -181,7 +188,7 @@ $initial_text_color: #999;
             height: 50px;
             border: none;
           }
-          .right-form__input-form__image{
+          &__image{
             position: absolute;
             right: 0;
             margin-right: 10px;
@@ -190,7 +197,7 @@ $initial_text_color: #999;
             }
           }
         }
-        .right-form__send-btn{
+        &__send-btn{
           color: $main_color;
           background-color: $link_color;
           text-align: center;

@@ -1,33 +1,34 @@
-%div.right-content
-  %div.right-header
-    %div.right-header__chat-space-info
-      %p.right-header__chat-space-title test
-      %p.right-header__chat-space-member Member : masa
-    %a{ :href => '#'}
-      %div.right-header__chat-space-title-edit-btn
-        %p.right-header__chat-space-title-edit-text Edit
-  %div.right-chat_space
-    %div.right-chat_space__members-chats
-      %div.right-chat_space__chats-info
-        %div.right-chat_space__member-name
+.right-content
+  .right-header
+    .right-header__chat-space
+      .right-header__chat-space__title test
+      .right-header__chat-space__member Member : masa
+    = link_to '#' do
+      .right-header__chat-space__title-edit
+        .right-header__chat-space__title-edit__btn
+          .right-header__chat-space__title-edit__btn__text Edit
+  .right-chat_space
+    .right-chat_space__chats
+      .right-chat_space__chats__members
+        .right-chat_space__chats__members__name
           %p masa
-        %div.right-chat_space__remark-time
+        .right-chat_space__chats__members__remark-time
           %p 2020/5/13(Wed) 18:00:00
-      %div.right-chat_space__chats
-        %p.right-chat_space__message おはよう！
-    %div.right-chat_space__my-chats
-      %div.right-chat_space__chats-info
-        %div.right-chat_space__member-name
+      .right-chat_space__chats__message
+        .right-chat_space__chats__message__content おはよう！
+    .right-chat_space__my-chats
+      .right-chat_space__my-chats__info
+        .right-chat_space__my-chats__info__name
           %p kato
-        %div.right-chat_space__remark-time
+        .right-chat_space__my-chats__info__remark-time
           %p 2020/5/13(Wed) 21:00:00
-      %div.right-chat_space__chats
-        %p.right-chat_space__message おはよう！！！
-  %div.right-form
-    %div.right-form__input
-      %form{class: "right-form__input-form"}
-        %input{class: "right-form__input-form__text", placeholder: "type a message"}
-        %label{class: "right-form__input-form__image"}
+      .right-chat_space__my-chats__message
+        .right-chat_space__my-chats__message__content おはよう！！！
+  .right-form
+    .right-form__input
+      %form{class: "right-form__input__form"}
+        %input{class: "right-form__input__form__text", placeholder: "type a message"}
+        %label{class: "right-form__input__form__image"}
           = icon('fas', 'image')
           %input{type: "file"}
-      %input{class: "right-form__send-btn", type: "submit", value: "Send"}
+      %input{class: "right-form__input__send-btn", type: "submit", value: "Send"}
