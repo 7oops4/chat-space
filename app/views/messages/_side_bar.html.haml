@@ -2,12 +2,13 @@
   .left-header
     .left-header__box
       .left-header__box__user-name
-        %p wHoAMI
+        = current_user.name
       .left-header__box__icons
         = link_to '#' do
           .far.fa-edit
         = link_to '#' do
-          .fas.fa-cog
+          = icon('fas', 'cog', class: 'icon')
+          -# .fas.fa-cog
   = link_to '#' do
     .group
       .group__name techcamp
