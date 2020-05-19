@@ -38,38 +38,38 @@ $initial_text_color: #999;
           width: 60px;
           display: flex;
           justify-content: flex-end;
-          .far{
-            &.fa-edit{
-              color: $main_color;
-              line-height: 20px;
-            }
-          }
-          .fas{
-            &.fa-cog{
-              color: $main_color;
-              padding-left: 5px;
-              line-height: 20px;
-            }
-          }
         }
       }
-    }
-    a{
-      color: $main_color;
-      text-decoration: none;
     }
     .group{
       background-color: #2f3e51;
       height: calc(100vh - 100px);
       padding: 20px 20px 0;
-      &__name{
-        font-size: 15px;
+      a{
+        color: $main_color;
+        text-decoration: none;
+        &__name{
+          font-size: 15px;
+        }
+        &__new-chat{
+          font-size: 11px;
+          margin-top: 5px;
+          margin-bottom: 40px;
+        }
       }
-      &__new-chat{
-        font-size: 11px;
-        margin-top: 5px;
-        margin-bottom: 40px;
-      }
+    }
+  }
+  .far{
+    &.fa-edit{
+      color: $main_color;
+      line-height: 20px;
+    }
+  }
+  .fas{
+    &.fa-cog{
+      color: $main_color;
+      padding-left: 5px;
+      line-height: 20px;
     }
   }
 
