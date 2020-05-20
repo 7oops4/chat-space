@@ -8,10 +8,10 @@
           .far.fa-edit
         = link_to edit_group_path(current_user.groups.ids) do
           .fas.fa-cog
-  - current_user.groups.each do |group|
-    .group
-      = link_to '#' do
+  .group
+    - current_user.groups.each do |group|
+      = link_to group_messages_path(group) do
         .group__name
           = group.name
-        .group__message
-          メッセージはまだありません。
+        .group__new-chat
+          = group.show_last_message

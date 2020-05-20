@@ -1,34 +1,25 @@
 .right-content
   .right-header
     .right-header__chat-space
-      .right-header__chat-space__title test
-      .right-header__chat-space__member Member : masa
-    = link_to '#' do
-      .right-header__chat-space__title-edit
+      .right-header__chat-space__title
+        = @group.name
+      .right-header__chat-space__member
+        .right-header__chat-space__member__name
+          %div Member :&nbsp;
+        - @group.group_users.each do |group_user|
+          = group_user.user.name
+    .right-header__chat-space__title-edit
+      = link_to edit_group_path(current_user.groups.ids) do
         .right-header__chat-space__title-edit__btn
           .right-header__chat-space__title-edit__btn__text Edit
   .right-chat_space
-    .right-chat_space__chats
-      .right-chat_space__chats__members
-        .right-chat_space__chats__members__name
-          %p masa
-        .right-chat_space__chats__members__remark-time
-          %p 2020/5/13(Wed) 18:00:00
-      .right-chat_space__chats__message
-        .right-chat_space__chats__message__content おはよう！
-    .right-chat_space__my-chats
-      .right-chat_space__my-chats__info
-        .right-chat_space__my-chats__info__name
-          %p kato
-        .right-chat_space__my-chats__info__remark-time
-          %p 2020/5/13(Wed) 21:00:00
-      .right-chat_space__my-chats__message
-        .right-chat_space__my-chats__message__content おはよう！！！
+    = render @messages
   .right-form
-    .right-form__input
-      %form{class: "right-form__input__form"}
-        %input{class: "right-form__input__form__text", placeholder: "type a message"}
-        %label{class: "right-form__input__form__image"}
-          = icon('fas', 'image')
-          %input{type: "file"}
-      %input{class: "right-form__input__send-btn", type: "submit", value: "Send"}
+    = form_for [@group, @message] do |f|
+      .right-form__input
+        .right-form__input__form
+          = f.text_field :content, class: 'right-form__input__form__text', placeholder: 'type a message'
+          = f.label :image, class: 'right-form__input__form__mask__image' do
+            = icon('fas', 'image')
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'right-form__input__send-btn'
