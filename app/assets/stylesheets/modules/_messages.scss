@@ -19,8 +19,7 @@ $initial_text_color: #999;
       font-weight: bold;
       display: flex;
       align-items: center;
-      height: 99px;
-      border-bottom: solid 1px #eeeeee;
+      height: 100px;
       padding: 0 20px;
       &__box{
         text-align: center;
@@ -69,24 +68,16 @@ $initial_text_color: #999;
   .fas{
     &.fa-cog{
       color: $main_color;
-      padding-left: 5px;
       line-height: 20px;
     }
   }
-// .right-header__chat-space__title
-//  = @group.name
-// .right-header__chat-space__member Member :
-//   .right-header__chat-space__member__name
-//     - @group.group_users.each do |group_user|
-//       = group_user.user.name
   .right-content{
     background-color: $main_color;
     width: calc(100vw - 300px);
     height: 100%;
     float: right;
     .right-header{
-      height: 99px;
-      border-bottom: solid 1px #eeeeee;
+      height: 100px;
       display: flex;
       justify-content: space-between;
       &__chat-space{
@@ -149,36 +140,10 @@ $initial_text_color: #999;
           }
         }
       }
-      // &__my-chats{
-      //   padding: 35px 40px 11px 0;
-      //   float: right;
-      //   &__info{
-      //     margin-bottom: 12px;
-      //     display: flex;
-      //     justify-content: space-between;
-      //     &__name{
-      //       color: #333;
-      //       font-size: 16px;
-      //       font-weight: bold;
-      //     }
-      //     &__remark-time{
-      //       color: $initial_text_color;
-      //       font-size: 12px;
-      //       padding-left: 5px;
-      //     }
-      //   }
-      //   &__message{
-      //     &__content{
-      //       color: #434A54;
-      //       font-size: 14px;
-      //     }
-      //   }
-      // }
     }
     .right-form{
       background-color: #d2d2d2;
       height: 90px;
-      
       &__input{
         padding: 20px 40px;
         display: flex;
@@ -194,7 +159,6 @@ $initial_text_color: #999;
           padding-left: 10px;
           height: 50px;
           border: none;
-          
         }
         &__mask{
           background-color: $main_color;
