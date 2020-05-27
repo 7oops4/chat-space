@@ -9,7 +9,7 @@
         - @group.group_users.each do |group_user|
           = group_user.user.name
     .right-header__chat-space__title-edit
-      = link_to edit_group_path(current_user.groups.ids) do
+      = link_to edit_group_path(@group) do
         .right-header__chat-space__title-edit__btn
           .right-header__chat-space__title-edit__btn__text Edit
   .right-chat_space
